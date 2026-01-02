@@ -14,7 +14,7 @@ spec:
   tolerations:
   - key: "key1"
     value: "value1"
-    effect: "NoExeute"
+    effect: "NoExecute"
     operator: "Equal"
   - key: "key1"
     value: "value1"
