@@ -13,7 +13,7 @@ spec:
 apiVersion: apps/v1
 kind: Pod
 metadata:
-  name: anti-anti-affinity
+  name: pod-anti-affinity
   labels:
     app: store
     purpose: pod-anti-affinity
