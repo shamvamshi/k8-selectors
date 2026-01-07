@@ -33,7 +33,7 @@ spec:
         podAffinityTerm:
           labelSelector:
             matchExpressions:
-            - key: app-name # should match label key
+            - key: app-nameee # should match label key
               operator: In
               values:
               - pod-1 # should match key value
