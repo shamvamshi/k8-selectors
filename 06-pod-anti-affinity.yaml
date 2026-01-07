@@ -37,5 +37,5 @@ spec:
             - pod-1
         topologyKey: "kubernetes.io/hostname"
   containers:
-  - name: pod-anti-affinity
+  - name: pod-2
     image: nginx
