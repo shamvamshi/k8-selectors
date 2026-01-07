@@ -31,7 +31,7 @@ spec:
       preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
         podAffinityTerm:
-        - labelSelector:
+          labelSelector:
             matchExpressions:
             - key: app-name # should match label key
               operator: In
