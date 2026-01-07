@@ -14,7 +14,7 @@ spec:
       #       # - gpu
       #         - gpuuu
       preferredDuringSchedulingIgnoredDuringExecution:
-        - weight: 1
+        - weight: 100 # High Weight (e.g., 90-100): "I really, really want this." ,,,,Low Weight (e.g., 1-10)
           preference:
             matchExpressions:
             - key: hardware
