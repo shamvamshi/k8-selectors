@@ -3,10 +3,29 @@ kind: Pod
 metadata:
   name: pod-1
   labels:
-    app-name: pod-1
+    app-name: pod-1 # this is key and value
     purpose: pod-affinity
 spec:
   containers:
   - name: pod-1
     image: nginx
 ---
+apiVersion: v1
+kind: Pod
+metadata:
+  app-name: pod-2
+  purpose: pod-affinity
+spec:
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app-name # should match label key
+            operator: In
+            values:
+            - pod-1 # should match key value
+        topologyKey: topology.kubernetes.io/zone
+  containers:
+  - name: pod-2
+    image: nginx
