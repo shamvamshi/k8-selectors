@@ -10,12 +10,12 @@ spec:
   - name: pod-1
     image: nginx
 ---
-apiVersion: apps/v1
+apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-anti-affinity
+  name: pod-2
   labels:
-    app: store
+    app-name: pod-2
     purpose: pod-anti-affinity
 spec:
   affinity:
